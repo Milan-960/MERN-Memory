@@ -29,7 +29,7 @@ const App = () => {
         <Container>
           <Grid
             container
-            justify="space-between"
+            justifyContent="space-evenly"
             alignItems="stretch"
             spacing={3}
           >

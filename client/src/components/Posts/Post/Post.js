@@ -42,7 +42,7 @@ const Post = ({ post, setCurrentId }) => {
           size="small"
           onClick={() => setCurrentId(post._id)}
         >
-          <MoreHorizIcon fontSize="default" />
+          <MoreHorizIcon />
         </Button>
       </div>
       <div className={classes.details}>
@@ -76,7 +76,7 @@ const Post = ({ post, setCurrentId }) => {
           color="primary"
           onClick={() => dispatch(deletePost(post._id))}
         >
-          <DeleteIcon fontSize="small" /> Delete
+          <DeleteIcon /> Delete
         </Button>
       </CardActions>
     </Card>
