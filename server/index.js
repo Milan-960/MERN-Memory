@@ -3,7 +3,7 @@ import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
-import postRoutes from "./routes/posts.js";
+import postRoutes from "./routes/posts";
 
 const app = express();
 dotenv.config();
@@ -14,6 +14,10 @@ app.use(cors());
 
 app.use("/posts", postRoutes);
 
+app.get("/", (req, res) => {
+  res.send("hello world");
+});
+
 const PORT = process.env.PORT || 8000;
 
 mongoose
@@ -23,9 +27,11 @@ mongoose
   })
   .then(() =>
     app.listen(PORT, () =>
-      console.log(`Server Running on Port: http://localhost:${PORT}`)
+      console.log(
+        `Server Running on Port: https://mern-memories-projects.herokuapp.com:${PORT}`
+      )
     )
   )
-  .catch((error) => console.log(`${error} did not connect`));
+  .catch((error) => console.log(error.message));
 
 mongoose.set("useFindAndModify", false);

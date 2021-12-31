@@ -1,0 +1,4 @@
+web: npm cache clean --force
+web: npm install nodemon --save-dev
+web: npm install --save && node index.js
+web: npm run start
