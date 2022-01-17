@@ -21,7 +21,7 @@ const App = () => {
     <Container maxWidth="lg">
       <AppBar className={classes.appBar} position="static" color="inherit">
         <Typography className={classes.heading} variant="h2" align="center">
-          Welcome to the Memory store!!
+          Welcome to the Memory store!
         </Typography>
         <img className={classes.image} src={memories} alt="icon" height="50" />
       </AppBar>
