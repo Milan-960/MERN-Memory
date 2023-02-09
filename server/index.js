@@ -19,10 +19,12 @@ app.get("/", (req, res) => {
 });
 
 const PORT = process.env.PORT || 8000;
+// const CONNECTION_URL = process.env.CONNECTION_URL;
 
 mongoose
   .connect(process.env.CONNECTION_URL, {
     useNewUrlParser: true,
+    useFindAndModify: false,
     useUnifiedTopology: true,
   })
   .then(() =>
